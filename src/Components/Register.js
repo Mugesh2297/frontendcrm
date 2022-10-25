@@ -115,7 +115,7 @@ function Register() {
                                         </div>
                                     </div>
                                     <Box sx={{ minWidth: 120}}>
-                                    <FormControl sx={{minWidth: 140}}>
+                                    <FormControl sx={{minWidth: 140}} style={{borderRadius:"10px"}}>
 
                                     <InputLabel id="demo-simple-select-label" >Role</InputLabel>
                                     <Select

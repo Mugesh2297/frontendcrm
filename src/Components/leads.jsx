@@ -97,7 +97,7 @@ function Leads() {
                                                                     <ul className="list-group list-group-flush ">
                                                                         <li class="list-group-item" style={{ color: 'black' }}><b>Lead Owner:</b> {user.leadOwner} </li>
                                                                         <li class="list-group-item" style={{ color: 'black' }}><b>Lead Source:</b>  {user.leadSource}</li>
-                                                                        <li class="list-group-item" style={{ color: 'black' }}><b>Lead Status:</b>  {user.leadStatus}</li>
+                                                                        <li class="list-group-item text-capitalize" style={{ color: 'black' }}><b>Lead Status:</b>  {user.leadStatus}</li>
                                                                         <li class="list-group-item" style={{ color: 'black' }}><b>Annual Revenue:</b> $ {user.annualRevenue}</li>
                                                                         <li class="list-group-item" style={{ color: 'black' }}><b>Phone:</b>  {user.phone}</li>
                                                                         <li class="list-group-item" style={{ color: 'black', fontSize: "15px"}}><b>Website:</b> <br/><a href={user.website} target="_blank"> {user.website}</a></li>

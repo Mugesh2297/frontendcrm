@@ -225,13 +225,20 @@ function EditLeads() {
             </div>
 
 
-            <div className='col-lg-6 p-2 mx-auto'>
-            <lable>Lead Status</lable>
-            <input className='form-control' type={"text"} placeholder="Enter Lead Status"
-            value={formik.values.leadStatus} onChange={formik.handleChange}
-            name="leadStatus"></input>
-            <span style={{color:'red'}}>{formik.errors.leadStatus}</span>
-            </div>
+            
+            <div className='col-lg-12 pt-2 mx-auto'>
+                                <select style= {{width:"535px", height:"40px", borderRadius:"5px"}}class="form-select" 
+                                aria-label="Default select example" lable="leadStatus" name="leadStatus"  
+                                value={formik.values.leadStatus} onChange={formik.handleChange}>
+                                    <option >Select for Lead Status</option>
+                                    <option value="new">New</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="qualified">Qualified</option>
+                                    <option value="lost">Lost</option>
+                                    <option value="canceled">Canceled</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                </select>
+                                </div>
            
          
           
