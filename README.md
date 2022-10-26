@@ -3,7 +3,7 @@ https://crm22.netlify.app/
 
 
 
-https://crmappbackend22.herokuapp.com/users/get
+https://crmappbackend22.herokuapp.com
 
 
 # Getting Started with Create React App
