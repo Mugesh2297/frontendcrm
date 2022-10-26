@@ -192,7 +192,7 @@ function CreateLeads() {
                                 aria-label="Default select example" lable="leadStatus" name="leadStatus"  
                                 value={formik.values.leadStatus} onChange={formik.handleChange}>
                                     <option >Select for Lead Status</option>
-                                    <option value="new">New</option>
+                                    <option value="new">New </option>
                                     <option value="contacted">Contacted</option>
                                     <option value="qualified">Qualified</option>
                                     <option value="lost">Lost</option>
