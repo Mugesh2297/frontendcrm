@@ -34,10 +34,8 @@ function Confirm() {
                 
             } catch (err) {
                console.log(err.response);
-                alert(err.response.data.msg);
-                if(err.response.status === 500){
-                    alert(err.response.data.Message);
-                }
+                alert(err.response.data.Message);
+                navigate("/")
             }
         }
     });
