@@ -19,7 +19,7 @@ function Confirm() {
                 errors.password = "Enter password"
             }
             if (value.confirmPassword === "") {
-                errors.password = "Enter password"
+                errors.confirmPassword = "Enter confirm password"
             }
             return errors
         },
@@ -52,7 +52,7 @@ function Confirm() {
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Password"
+                                        id="exampleInputPassword" placeholder="Enter Password"
                                         name="password"
                                         value={formik.values.password} onChange={formik.handleChange}/>
                                         <span style={{color:'red'}}>{formik.errors.password}</span>
