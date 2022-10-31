@@ -81,6 +81,7 @@ function Login() {
                                                     value={formik.values.password} onChange={formik.handleChange}
                                                 />
                                                 <span style={{ color: 'red' }}>{formik.errors.password}</span>
+                                                <br/>
                                                 <span style={{ color: "red" }}>{value}</span>
 
 
