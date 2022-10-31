@@ -74,7 +74,7 @@ function Leads() {
                         {
                             isLoading ? <span>Loading...</span> :
 
-                                <div className="card mb-5" style={{backgroundColor: "#34568b"}}>
+                                <div className="card mb-5" style={{backgroundColor: "#DDDDDD"}}>
                                     <div className="card-header py-3">
                                         <h6 className="m-0 font-weight-bold text-primary"> Details</h6>
                                     </div>
