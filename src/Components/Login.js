@@ -85,7 +85,6 @@ function Login() {
 
 
                                             </div>
-                                            <span style={{ color: "red" }}>{value}</span>
 
                                             <button className="btn btn-primary btn-user btn-block" type="submit" disabled={!formik.isValid}>
                                                 Login
