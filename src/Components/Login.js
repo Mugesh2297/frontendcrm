@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import login from "../img/login.svg";
 
 
 function Login() {
     const navigate = useNavigate();
-    
+    const[value,setValue]= useState("");
     const formik = useFormik({
         initialValues: {
          email: "",
@@ -36,7 +36,7 @@ function Login() {
             }catch(err){
                 console.log(err.response.status);
                 if(err.response.status=400){
-                 alert(err.response.data.msg)
+                    setValue(err.response.data.msg);
 
                   }
             }
@@ -83,6 +83,7 @@ function Login() {
                                  <span style={{color:'red'}}>{formik.errors.password}</span>
 
                                           </div>
+                                          <div><span style={{color:"red"}}>{value}</span></div>
                                        
                                         <button className="btn btn-primary btn-user btn-block" type="submit" disabled={!formik.isValid}>
                                             Login
