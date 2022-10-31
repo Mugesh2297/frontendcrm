@@ -66,7 +66,7 @@ function Leads() {
                         {/* <!-- Page Heading --> */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
                             <h1 className="h3 mb-0 text-gray-800">Lead Details</h1>
-                            <Link to="/createLeads" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <Link to="/createLeads" className="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i
                                 className="fas fa-download fa-sm text-white-50"></i> Create Leads</Link>
                         </div>
 
