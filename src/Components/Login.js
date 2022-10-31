@@ -82,7 +82,7 @@ function Login() {
                                                 />
                                                 <span style={{ color: 'red' }}>{formik.errors.password}</span>
                                                 <br/>
-                                                <span style={{ color: "red" }}>{value}</span>
+                                                <center><span style={{ color: "red" }}>{value}</span></center>
 
 
                                             </div>
