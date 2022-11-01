@@ -59,9 +59,11 @@ function ForgetPass() {
                                                 placeholder="Enter Email Address..."
                                                 onChange={formik.handleChange}
                                                   value={formik.values.email}/>
+                                                  <br/>                                        
+                                                  <center><span style={{color:'red'}}>{value}</span></center>
+
                                         </div>
-                                        <br/>
-                                        <center><span style={{color:'red'}}>{value}</span></center>
+                                       
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Reset Password
                                         </button>
