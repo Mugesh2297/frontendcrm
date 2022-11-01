@@ -1,12 +1,13 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import forget from "../img/forgot.svg";
 
 
 function ForgetPass() {
     const navigate = useNavigate();
+    const[value,setValue]= useState();
     let formik = useFormik({
         initialValues: {
           email: "",
@@ -21,7 +22,8 @@ function ForgetPass() {
           }
         }catch(err){
                 console.log(err.response.status);
-                alert(err.response.data.msg)
+                // alert(err.response.data.msg);
+                setValue(err.response.data.msg);
                 
             }
           
@@ -61,6 +63,8 @@ function ForgetPass() {
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Reset Password
                                         </button>
+                                        <br/>
+                                        <span style={{color:'red'}}>{value}</span>
                                     </form>
                                     <hr/>
                                     <div class="text-center">
