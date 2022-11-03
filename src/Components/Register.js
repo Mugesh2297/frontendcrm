@@ -114,7 +114,7 @@ function Register() {
                                             <span style={{ color: 'red' }}>{formik.errors.confirmPassword}</span>
                                         </div>
                                     </div>
-                                    <Box sx={{ minWidth: 120}}>
+                                   <center> <Box sx={{ minWidth: 120}}>
                                     <FormControl sx={{minWidth: 140}} style={{borderRadius:"10px"}}>
 
                                     <InputLabel id="demo-simple-select-label" >Role</InputLabel>
@@ -131,7 +131,7 @@ function Register() {
                                         <MenuItem value={"user"}>User</MenuItem>
                                     </Select>
                                     </FormControl>
-                                    </Box><br/>
+                                    </Box></center><br/>
                                     <button type="submit" class="btn btn-primary btn-user btn-block" disabled={!formik.isValid}>
                                         Register Account
                                     </button>

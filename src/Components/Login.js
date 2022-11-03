@@ -35,7 +35,7 @@ function Login() {
 
             } catch (err) {
                 console.log(err.response.status);
-                if (err.response.status = 400) {
+                if (err.response.status === 400) {
                     setValue(err.response.data.msg);
 
                 }
