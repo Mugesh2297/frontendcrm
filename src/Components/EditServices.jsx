@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
-import Alert from '@mui/material/Alert';
+import Swal from 'sweetalert2';
 
 function EditServices() {
   const params = useParams()
@@ -42,14 +42,14 @@ function EditServices() {
       })
       console.log(response)
       if(response.status===200){
-        alert("Service Edited");
+        Swal.fire({ title: 'Service Edited Successfully',  icon: 'success', confirmButtonText: 'okay'});
         
       navigate('/services');
       }
     }catch(err){
       console.log(err.response)
-      alert(err.response.data.msg)
-    
+      Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+      navigate('/services');
     }
     }
   })

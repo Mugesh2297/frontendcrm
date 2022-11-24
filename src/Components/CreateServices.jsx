@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import Swal from 'sweetalert2';
 
 
 function CreateServices() {
@@ -45,11 +46,12 @@ function CreateServices() {
                     }
                 });
                 console.log(response)
-                alert("Service Created Successfully")
+                Swal.fire({ title: 'Service Created Successfully',  icon: 'success', confirmButtonText: 'okay'});
                 navigate("/services")
             } catch (err) {
                 console.log(err.response.data.msg)
-                alert(err.response.data.msg)
+                Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+                navigate("/services")
             }
 
         }

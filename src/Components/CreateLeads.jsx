@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import Swal from 'sweetalert2';
 
 function CreateLeads() {
   const navigate = useNavigate()
@@ -72,11 +73,12 @@ function CreateLeads() {
         accesstoken: localStorage.getItem("token"),
     }});
     console.log(response)
-    alert("Leads Created Successfully")
+    Swal.fire({ title: 'Leads Created Successfully',  icon: 'success', confirmButtonText: 'okay'});
     navigate("/leads")
   }catch(err){
     console.log(err.response.data.msg)
-    alert(err.response.data.msg)
+    Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+    navigate("/leads")
   }
       
     }

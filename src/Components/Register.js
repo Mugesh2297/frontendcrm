@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import register from "../img/register.jpg";
+import Swal from 'sweetalert2';
 
 
 function Register() {
@@ -52,12 +53,12 @@ function Register() {
             try {
                 var response = await axios.post("https://crmappbackend22.herokuapp.com/register/signup", values);
                 localStorage.setItem("token", response.data);
-                alert("User Created");
+                Swal.fire({ title: 'User Created Successfully',  icon: 'success', confirmButtonText: 'okay'});
                 navigate("/");
             }
             catch (err) {
                 console.log(err.response);
-                alert(err.response.data.msg);
+                Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
             }
         }
 

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import Swal from 'sweetalert2';
 
 
 function EditLeads() {
@@ -71,14 +72,13 @@ function EditLeads() {
       })
       console.log(response)
       if(response.status===200){
-        alert("Leads Edited");
-        
+        Swal.fire({ title: 'Leads Edited Successfully',  icon: 'success', confirmButtonText: 'okay'});
       navigate('/leads');
       }
     }catch(err){
       console.log(err.response)
-      alert(err.response.data.msg)
-    
+      Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+      navigate('/leads');
     }
     }
   })

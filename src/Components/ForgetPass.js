@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import React, { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import forget from "../img/forgot.svg";
+import Swal from 'sweetalert2';
 
 
 function ForgetPass() {
@@ -17,7 +18,7 @@ function ForgetPass() {
           let response  = await axios.post('https://crmappbackend22.herokuapp.com/forgotpassword', values);
           console.log(response);
           if(response.status === 200){
-            alert("Email sent to the mail ")
+            Swal.fire({ title: 'Email Sent Successfully',  icon: 'success', confirmButtonText: 'okay'});
             navigate("/")
           }
         }catch(err){

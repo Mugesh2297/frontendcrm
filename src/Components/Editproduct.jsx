@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
-import Alert from '@mui/material/Alert';
+import Swal from 'sweetalert2';
 
 function EditProduct() {
   const params = useParams()
@@ -42,13 +42,14 @@ function EditProduct() {
       })
       console.log(response)
       if(response.status===200){
-        alert("Product Edited");
+        Swal.fire({ title: 'Product Edited Successfully',  icon: 'success', confirmButtonText: 'okay'});
         
       navigate('/products');
       }
     }catch(err){
       console.log(err.response)
-      alert(err.response.data.msg)
+      Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+      navigate("/products");
     
     }
     }

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import services from "../img/Services.png";
+import Swal from 'sweetalert2';
 
 
 
@@ -37,12 +38,12 @@ function Services() {
                         }
                     });
                 console.log(response)
-                alert("Deleted Successfully")
+                Swal.fire({ title: 'Service Deleted Successfully',  icon: 'success', confirmButtonText: 'okay'});
                 loadData()
             }
         } catch (error) {
             console.log(error.response);
-            alert(error.response.data.msg)
+            Swal.fire({ title: error.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
 
         }
     }

@@ -7,6 +7,8 @@ import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import leads from "../img/leads.png";
 import { fontSize } from '@mui/system';
+import Swal from 'sweetalert2';
+
 
 
 
@@ -37,12 +39,14 @@ function Leads() {
                         }
                     });
                 console.log(response)
-                alert("Deleted Successfully")
+                
+                Swal.fire({ title: 'Data Deleted Successful',  icon: 'success', confirmButtonText: 'okay'});
                 loadData()
             }
         } catch (error) {
             console.log(error.response);
-            alert(error.response.data.msg)
+           
+            Swal.fire({ title: error.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
 
         }
     }

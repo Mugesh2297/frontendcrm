@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import Swal from 'sweetalert2';
 
 function Createproduct() {
   const navigate = useNavigate()
@@ -58,11 +59,12 @@ function Createproduct() {
         accesstoken: localStorage.getItem("token"),
     }});
     console.log(response)
-    alert("User Created Successfully")
+    Swal.fire({ title: 'Product Created Successfully',  icon: 'success', confirmButtonText: 'okay'});
     navigate("/products")
   }catch(err){
     console.log(err.response.data.msg)
-    alert(err.response.data.msg)
+    Swal.fire({ title: err.response.data.msg,  icon: 'error', confirmButtonText: 'okay'});
+    navigate("/products")
   }
       
     }
@@ -91,7 +93,7 @@ function Createproduct() {
             <input className='form-control' type={"text"} placeholder="Enter Product Name" 
             value={formik.values.productName} onChange={formik.handleChange}
             name="productName"></input>
-            <span style={{color:'red'}}>{formik.errors.name}</span>
+            <span className="span__error"style={{color:'red'}}>{formik.errors.name}</span>
             </div>
           
             <div className='col-lg-6 p-2 mx-auto'>
@@ -99,7 +101,7 @@ function Createproduct() {
             <input className='form-control' type={"text"} placeholder="Enter Quantity"
             value={formik.values.quantity} onChange={formik.handleChange}
             name="quantity"></input>
-            <span style={{color:'red'}}>{formik.errors.color}</span>
+            <span className="span__error" style={{color:'red'}}>{formik.errors.color}</span>
             </div>
 
          
@@ -108,7 +110,7 @@ function Createproduct() {
             <input className='form-control' type={"text"} placeholder="Enter Price"
             value={formik.values.price} onChange={formik.handleChange}
             name="price"></input>
-            <span style={{color:'red'}}>{formik.errors.manufacturer}</span>
+            <span className="span__error" style={{color:'red'}}>{formik.errors.manufacturer}</span>
             </div>
        
             <div className='col-lg-6 p-2 mx-auto'>
@@ -116,7 +118,7 @@ function Createproduct() {
             <input className='form-control' type={"text"} placeholder="Enter Description"
             value={formik.values.description} onChange={formik.handleChange}
             name="description"></input>
-            <span style={{color:'red'}}>{formik.errors.month}</span>
+            <span className="span__error" style={{color:'red'}}>{formik.errors.month}</span>
             </div>
            
            
