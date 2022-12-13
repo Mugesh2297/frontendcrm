@@ -35,7 +35,7 @@ function EditProduct() {
     },
     onSubmit: async (values) => {
       try{
-     let response =  await axios.put(`https://crmappbackend22.herokuapp.com/products/update/${params.id}`, values,{
+     let response =  await axios.put(`https://crm-efrm.onrender.com/products/update/${params.id}`, values,{
         headers:{
           accesstoken: localStorage.getItem("token"),
       }
@@ -61,7 +61,7 @@ function EditProduct() {
 
   let loadUser = async () => {
     try {
-      let user = await axios.get(`https://crmappbackend22.herokuapp.com/products/get/${params.id}`,{
+      let user = await axios.get(`https://crm-efrm.onrender.com/products/get/${params.id}`,{
         headers:{
           accesstoken: localStorage.getItem("token"),
       }

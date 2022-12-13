@@ -55,7 +55,7 @@ function Createproduct() {
     onSubmit: async (values) => {
      
      try{
-      var response = await axios.post("https://crmappbackend22.herokuapp.com/products/create",values,{headers:{
+      var response = await axios.post("https://crm-efrm.onrender.com/products/create",values,{headers:{
         accesstoken: localStorage.getItem("token"),
     }});
     console.log(response)

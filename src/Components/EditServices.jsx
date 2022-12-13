@@ -35,7 +35,7 @@ function EditServices() {
     },
     onSubmit: async (values) => {
       try{
-     let response =  await axios.put(`https://crmappbackend22.herokuapp.com/services/update/${params.id}`, values,{
+     let response =  await axios.put(`https://crm-efrm.onrender.com/services/update/${params.id}`, values,{
         headers:{
           accesstoken: localStorage.getItem("token"),
       }
@@ -60,7 +60,7 @@ function EditServices() {
 
   let loadUser = async () => {
     try {
-      let user = await axios.get(`https://crmappbackend22.herokuapp.com/services/get/${params.id}`,{
+      let user = await axios.get(`https://crm-efrm.onrender.com/services/get/${params.id}`,{
         headers:{
           accesstoken: localStorage.getItem("token"),
       }

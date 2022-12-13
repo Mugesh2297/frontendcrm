@@ -13,7 +13,7 @@ function LeadsView() {
     }, [])
     let loadUser = async () => {
         try {
-            var user = await axios.get(`https://crmappbackend22.herokuapp.com/leads/get/${params.leadsid}`,{
+            var user = await axios.get(`https://crm-efrm.onrender.com/leads/get/${params.leadsid}`,{
                 headers:{
                     accesstoken: localStorage.getItem("token"),
                 }

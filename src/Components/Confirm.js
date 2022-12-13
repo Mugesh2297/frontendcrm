@@ -26,7 +26,7 @@ function Confirm() {
         onSubmit: async (values) => {
           
             try {
-               var response =  await axios.post(`https://crmappbackend22.herokuapp.com/resetpass/${test.id}/${test.token}`, values);
+               var response =  await axios.post(`https://crm-efrm.onrender.com/resetpass/${test.id}/${test.token}`, values);
                console.log(response)
                 Swal.fire({ title: 'Password reset Successful', text: 'Updated Done', icon: 'success', confirmButtonText: 'Login'});
                 navigate("/")

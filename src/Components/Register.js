@@ -51,7 +51,7 @@ function Register() {
         },
         onSubmit: async (values) => {
             try {
-                var response = await axios.post("https://crmappbackend22.herokuapp.com/register/signup", values);
+                var response = await axios.post("https://crm-efrm.onrender.com/register/signup", values);
                 localStorage.setItem("token", response.data);
                 Swal.fire({ title: 'User Created Successfully',  icon: 'success', confirmButtonText: 'okay'});
                 navigate("/");

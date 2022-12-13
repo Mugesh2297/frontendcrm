@@ -20,7 +20,7 @@ function Leads() {
     }, [])
     let loadData = async () => {
         setLoading(true)
-        let users = await axios.get("https://crmappbackend22.herokuapp.com/leads/get", {
+        let users = await axios.get("https://crm-efrm.onrender.com/leads/get", {
             headers: {
                 accesstoken: localStorage.getItem("token"),
             }
@@ -32,7 +32,7 @@ function Leads() {
         try {
             let ask = window.confirm("Are You Sure Want to Delete This Data");
             if (ask) {
-                let response = await axios.delete(`https://crmappbackend22.herokuapp.com/leads/delete/${id}`,
+                let response = await axios.delete(`https://crm-efrm.onrender.com/leads/delete/${id}`,
                     {
                         headers: {
                             accesstoken: localStorage.getItem("token"),

@@ -15,7 +15,7 @@ function ForgetPass() {
         },
         onSubmit: async (values) => {
             try{
-          let response  = await axios.post('https://crmappbackend22.herokuapp.com/forgotpassword', values);
+          let response  = await axios.post('https://crm-efrm.onrender.com/forgotpassword', values);
           console.log(response);
           if(response.status === 200){
             Swal.fire({ title: 'Email Sent Successfully',  icon: 'success', confirmButtonText: 'okay'});
