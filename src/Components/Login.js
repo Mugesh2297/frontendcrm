@@ -111,7 +111,7 @@ function Login() {
 
 
        </div>
-       <div className="testing">
+       <div style={{ textAlign: 'center' }}>
            <p> For testing use:</p>
             <p>email: kmugesh297@gmail.com</p>
             <p>password: 1234</p>
