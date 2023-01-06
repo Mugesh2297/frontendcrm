@@ -111,8 +111,11 @@ function Login() {
 
         </div>
         <footer className="row justify-content-center">
+                                                
          <h5>Sample Credentials to Login </h5>
+                                            <br/>
           <p>UserName: kmugesh297@gmail.com </p>
+<br/>
           <p>Password: 1234 </p>
         </footer>
        </div>
