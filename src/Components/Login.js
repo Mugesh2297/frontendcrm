@@ -114,9 +114,13 @@ function Login() {
                                                 
          <div>Sample Credentials to Login </div>
                                             <br/>
-          <div>UserName: kmugesh297@gmail.com </div>
+          <div className="text-center">
+                                            <h1 className="h4 text-gray-900 mb-4">User Name : kmugesh297@gmail.com</h1>
+                                        </div>
 <br/>
-          <div>Password: 1234 </div>
+           <div className="text-center">
+                                            <h1 className="h4 text-gray-900 mb-4">Password : 1234</h1>
+                                        </div>
         </div>
        </div>
                                             
