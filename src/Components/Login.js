@@ -107,6 +107,11 @@ function Login() {
                 </div>
 
             </div>
+            <div className="testing">
+           <p> For testing use:</p>
+            <p>email: mugeshkumark22@gmail.com</p>
+            <p>password: Mugesh@22</p>
+        </div>
 
         </div>
     )
