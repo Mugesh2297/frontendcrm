@@ -45,6 +45,7 @@ function Login() {
 
 
     return (
+        <div>
         <div className="container">
 
             {/* <!-- Outer Row --> */}
@@ -107,13 +108,16 @@ function Login() {
                 </div>
 
             </div>
-            <div className="testing">
-           <p> For testing use:</p>
-            <p>email: mugeshkumark22@gmail.com</p>
-            <p>password: Mugesh@22</p>
-        </div>
 
+
+       </div>
+       <div className="testing">
+           <p> For testing use:</p>
+            <p>email: kmugesh297@gmail.com</p>
+            <p>password: 1234</p>
         </div>
+       </div>
+                                            
     )
 }
 
