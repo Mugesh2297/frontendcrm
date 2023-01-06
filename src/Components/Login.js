@@ -108,20 +108,12 @@ function Login() {
                 </div>
 
             </div>
-
+<div className="testing">
+           <p> For testing use:</p>
+            <p>email: mugeshkumark22@gmail.com</p>
+            <p>password: Mugesh@22</p>
         </div>
-        <div className="row justify-content-center">
-                                                
-         <div>Sample Credentials to Login </div>
-                                            <br/>
-          <div className="text-center">
-                                            <h1 className="h4 text-gray-900 mb-4">User Name : kmugesh297@gmail.com</h1>
-                                        </div>
-<br/>
-           <div className="text-center">
-                                            <h1 className="h4 text-gray-900 mb-4">Password : 1234</h1>
-                                        </div>
-        </div>
+       
        </div>
                                             
     )
