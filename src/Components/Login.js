@@ -45,6 +45,7 @@ function Login() {
 
 
     return (
+        <div>
         <div className="container">
 
             {/* <!-- Outer Row --> */}
@@ -109,6 +110,11 @@ function Login() {
             </div>
 
         </div>
+        <footer>
+         <h3>Sample Credentials to Login </h3>
+        </footer>
+       </div>
+                                            
     )
 }
 
